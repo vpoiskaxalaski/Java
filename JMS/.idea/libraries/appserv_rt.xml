@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="appserv-rt">
+    <CLASSES>
+      <root url="jar://E:/glassfish5/glassfish/lib/appserv-rt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jaxm-api">
+    <CLASSES>
+      <root url="jar://E:/glassfish5/mq/lib/jaxm-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
