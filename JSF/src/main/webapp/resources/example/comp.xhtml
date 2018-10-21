@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:cc = "http://java.sun.com/jsf/composite"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+    <cc:interface>
+        <cc:attribute name="name"/>
+        <cc:attribute name="info"/>
+        <cc:attribute name="money"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="name" value="Name: " />
+            <h:outputLabel id="name" value="#{cc.attrs.name}" />
+            <h:outputLabel for="info" value="Card Expiry Date: " />
+            <h:outputLabel id="info" value="#{cc.attrs.info}" />
+            <h:outputLabel for="money" value="Account: " />
+            <h:outputLabel id="money" value="#{cc.attrs.money}" />
+        </h:panelGrid>
+    </cc:implementation>
+</h:body>
+
+</html>

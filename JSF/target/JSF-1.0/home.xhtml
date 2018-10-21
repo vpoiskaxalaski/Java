@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:t="http://xmlns.jcp.org/jsf/composite/example"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Welcome</title>
+</h:head>
+
+<h:body>
+    <ui:include src="header.xhtml"/>
+
+    <h:panelGrid width="100%" rendered="#{cardControllerBean.user!= null}">
+        <t:comp name="#{cardControllerBean.user.name}"
+                info="#{cardControllerBean.user.info}"
+                money="#{cardControllerBean.user.money}"/>
+        <h:form>
+            <h:commandButton value="Pay" type="submit" action="successPay">
+                <f:actionListener binding="#{cardControllerBean.tryPay()}" />
+            </h:commandButton>
+        </h:form>
+    </h:panelGrid>
+
+    <h:panelGrid width="100%" rendered="#{cardControllerBean.user == null}">
+        <ui:include src="error.xhtml" />
+    </h:panelGrid>
+
+    <ui:include src="footer.xhtml"/>
+</h:body>
+</html>
